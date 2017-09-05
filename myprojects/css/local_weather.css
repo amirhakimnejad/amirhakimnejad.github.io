@@ -11,26 +11,23 @@ body {
 	-moz-user-select:none;
 	color:rgb(108,21,7) !important;
 }
-.fontsize{
-	font-size:2.2rem !important;
-}
 .fullscrdivs{
 	width:100%;
 	height:100%;
 	position:absolute;
 }
 .fulldiv1{
-	background-image:url('IMG_4577.JPG');
-	background-size:cover;
+	background-image:url('../projpics/IMG_4577.JPG');
+	
+background-size:cover;
 	background-repeat:no-repeat;
 }
 .divtable{
 	background-color:rgba(5, 0, 0,0.7);
 	height:90%;
-	width:100%;
 	position:relative;
     margin: 0;
-    top: 53%;
+    top: 52%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
