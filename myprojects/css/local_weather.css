@@ -12,7 +12,7 @@ body {
 	color:rgb(108,21,7) !important;
 }
 .fontsize{
-	font-size:2.2rem !important;
+	font-size:2.8rem !important;
 }
 .fullscrdivs{
 	width:100%;
@@ -88,3 +88,4 @@ table{
 	visibility:hidden;
 	cursor:pointer;
 }
+@media only screen and ()
