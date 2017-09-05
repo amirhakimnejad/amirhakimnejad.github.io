@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/local_weather.css">
+	<script src="js/local_weather.js"></script>
+	<title>Local Weather</title>
+</head>
+<body>
+	<div class="fullscrdivs fulldiv1">
+		<div class="divtable">
+			<table>
+				<tr style="height:15%;">
+					<th>
+						<h3>
+						<a id="cityInfo" href="#" target="_blank">Getting your information</a>
+						</h3>
+					</th>
+				</tr>
+				<tr style="height:15%;">
+					<td id="weatherImg">--</td>
+				</tr>
+				<tr style="height:10%;">
+					<td>
+						<a id="nowTemp">--</a> <a>&deg;</a><a id="unitshower" onclick="convertTemp()" title="Click to change unit!">C</a>
+					</td>
+				</tr>
+				<tr style="height:30%;">
+					<td>
+						<p><i class="material-icons">&#xe5d8;</i><a id="todaymaxtemp">--</a>
+						<i class="material-icons">&#xe5db;</i><a id="todaymintemp">--</a></p>
+						<p id="wind">--</p>
+					</td>
+				</tr>
+				<tr style="height:30%;">
+					<td>
+						<p id="tomorrow">--</p>
+						<p><span class="material-icons">&#xe5d8;</span><a id="tommaxtemp">--</a><a> </a>
+						<span class="material-icons">&#xe5db;</span><a id="tommintemp">--</a></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<footer>
+		<div class="navdiv"><a class="homeicn" href="https://amirhakimnejad.github.io" title="Take me home!"><i class="fa fa-home"></i></a></div>
+	</footer>
+</body>
+</html>

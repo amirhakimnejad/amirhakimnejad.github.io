@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Quote Machine</title>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<script src="js/rq-machine.js"></script>
+	<link rel="stylesheet" href="css/rq-machine.css"/>
+</head>
+<body>
+	<div class="fulscrdivs">
+		<div class="tablecontent">
+					<div class="divbtnstyle">
+						<a class="btnstyle" onclick="movieCat()">Random Movie Quotes</a>
+						<a class="btnstyle" onclick="famCat()">Random Famous Quotes</a>
+						<a class="btnstyle" onClick="window.location.reload();">Request For New Qoutes</a>
+						<a class="btnstyle" id="tweetitbtn" href="https://twitter.com/intent/tweet?hashtags=quotes&text=I think the foremost quality – there’s no success without it – is really loving what you do. If you love it, you do it well, and there’s no success if you don’t do well what you’re working at.--Malcolm Forbes"
+						title="Tweet this one!" target="_blank"><i class="fa fa-twitter"></i></a>
+					</div>
+			<table>
+				<tr>
+					<td>
+						<blockquote class="bqoutestyle">
+							<p id="quote">I think the foremost quality – there’s no success without it – is really loving what you do. If you love it, you do it well, and there’s no success if you don’t do well what you’re working at.
+							</p>
+							<i id="author">Malcolm Forbes</i>
+						</blockquote>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<footer>
+	<nav>
+		<div class="nav">
+		<i class="fa fa-home btnstyle "></i>
+		</div>
+	</nav>
+</footer>
+</body>
+</html>
