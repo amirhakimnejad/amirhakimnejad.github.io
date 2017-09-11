@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Wikipedia Viewer</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/wikipedia_viewer.css"/>
+</head>
+<body>
+	<div class="fullscrdiv">
+		<div class="navdiv">
+			<form align="center" action="#">
+				<a href="https://amirhakimnejad.github.io"><i class="btn fontsize fa fa-home"></i></a>
+				<select class="font fontsize selectstyle" id="langselect">
+					<option value="en">English</option>
+					<option value="fa">Persian</option>
+					<option value="es">Spanish</option>
+					<option value="ja">Japanese</option>
+					<option value="de">German</option>
+					<option value="fr">French</option>
+					<option value="it">Italian</option>
+				</select>
+				<input class="inputsstyle font fontsize" id="searchVal" type="text" placeholder="Search Something..." required />
+				<input class='inputsstyle fontsize btn fa' type="submit" value="&#xf266;" onclick="sendInputValues()"/>
+				<a id="randomAr" onclick="random()" href="" title="Click for a random article!!" target="_blank"><i class='fontsize btn fa fa-random'></i></a>
+			</form>
+		</div>
+		<div id="results" align="center">
+		</div>
+	</div>
+	<script src="js/wikipedia_viewer.js"></script>
+</body>
+</html>
