@@ -11,7 +11,7 @@ body {
 	min-width:300px;
 	height:100%;
 	position:fixed;
-	background-image:url('https://github.com/amirhakimnejad/amirhakimnejad.github.io/raw/master/myprojects/projpics/IMG_4574.jpg');
+	background-image:url('../projpics/IMG_4574.JPG');
 	background-size:cover;
 	background-repeat:no-repeat;
 	width:100%;
