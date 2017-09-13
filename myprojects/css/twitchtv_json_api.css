@@ -1,0 +1,75 @@
+body {
+	font-family:'Open Sans Condensed';
+	font-size:1.8em;
+	color:rgb(108,21,7);
+	padding:0;
+	margin:0;
+	border:0;
+}
+.fullscrdiv {
+	width:100%;
+	min-width:300px;
+	height:100%;
+	position:fixed;
+	background-image:url('../projpics/IMG_4574.JPG');
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.contdiv {
+	width:80%;
+	min-width:200px;
+	max-height:100%;
+	background-color:rgba(117, 117, 117,0.7);
+    margin: 0px;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.formstyle {
+	background-color:black;
+}
+.inputstyle {
+	min-width:260px;
+	border:0;
+	overflow:hidden;
+	box-shadow: none;
+    background: transparent;
+	color:white;
+}
+.font{
+	font-family:'Open Sans Condensed';
+	font-size:0.8em;
+	color:rgb(108,21,7);
+}
+a:link {
+    text-decoration: none;
+	color:black;
+}
+a:visited {
+    text-decoration: none;
+	color:black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+.btn {
+	border:0px !important;
+	cursor:pointer;
+    border-radius: 3px;
+    padding: 5px 8px;
+    background: transparent;
+	color:rgb(108,21,7);
+}
+.btn:hover{
+    color: black;
+	background-color:rgb(108,21,7);
+}

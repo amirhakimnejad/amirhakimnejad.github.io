@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TwitchTV JSON API</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/twitchtv_json_api.css"/>
+</head>
+<body>
+	<div class="fullscrdiv">
+		<div align="center" class="contdiv">
+			<form class="formstyle" action="#" onsubmit="sendTwiReq(document.getElementById('searchVal').value);">
+				<a title="Take me home!!" href="https://amirhakimnejad.github.io"><i class="btn fa fa-home"></i></a>
+				<input class="font inputstyle" type="text" id="searchVal" oninput="document.getElementById('searchVal').value = document.getElementById('searchVal').value.match(/\w/gi).join('');" placeholder="Search for a Twitch.tv username.." required />
+				<input class="btn fa fa-twitch" type="submit" value="&#xf1e8;" />
+			</form>
+			<div id="result"></div>
+		</div>
+	</div>
+<script src="js/twitchtv_json_api.js"></script>
+</body>
