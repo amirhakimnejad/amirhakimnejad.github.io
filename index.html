@@ -59,33 +59,6 @@ $(document).ready(function(){
     } // End if
   });
 });
-//SlideShow
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-}
 </script>
 <div class="bgimg w3-display-container w3-animate-opacity"id="home">
 
@@ -122,32 +95,33 @@ function showDivs(n) {
 <div class="w3-container bgimg pj" style="width:100%;height:100%;display: flex;justify-content: center;" id="portfolio">
 	<table class="tablesproj"style="margin:auto 0px;background-color:black;width:85%;height:40%;">
 		<tr style="line-height:1em;border:1px solid white;">
-			<th style="margin-top:0px;"><h3>Here are Some of my Projects</h3><h6 class="font">There will be more in a few months I promise</h6></th>
+			<th style="margin-top:0px;"><h3>Here are Some of my Projects</h3></th>
 		</tr>
 		<tr>
 		<td>
-			<div class="w3-content slide " style="margin:auto;max-width:30%;max-height:30%;">
-  <img class="mySlides landslidebig" src="http://s8.picofile.com/file/8303982750/KojimasTribute.JPG" style="width:100%">
-<!--
-  <img class="mySlides landslidebig" src="IMG_4550.JPG" style="width:100%">
-  <img class="mySlides landslidebig" src="IMG_4581.JPG" style="width:100%">
--->
-  <div class="slide1 w3-row-padding w3-section ">
-    <div class=" w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off landslidesml" src="http://s8.picofile.com/file/8303982750/KojimasTribute.JPG" style="width:100%" onclick="currentDiv(1)">
-    </div>
-<!--
-
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off landslidesml" src="IMG_4550.JPG" style="width:100%" onclick="currentDiv(2)">
-    </div>
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off landslidesml" src="IMG_4581.JPG" style="width:100%" onclick="currentDiv(3)">
-	</div>
--->
-  </div>
-</div>
-
+			<script>
+				var countDownDate = new Date("Nov 25, 2017 00:00:00").getTime();
+				var x = setInterval(function() {
+				var now = new Date().getTime();
+				var distance = countDownDate - now;
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+				
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("countdown").innerHTML = "no time!!";
+				}
+				}, 1000);
+			</script>
+			<h2 class="font" style="text-align:center;">This section will be updated in <i id="countdown" style="color:white!important;"></i></h4>
+				<h3  style="text-align:center;">You can temporarily see them <a href="https://github.com/amirhakimnejad/amirhakimnejad.github.io/tree/master/myprojects" target="_blank">here</a>.</h3>
+			
+			
+			
 		</td>
 		</tr>
 		<tr>
@@ -173,7 +147,7 @@ function showDivs(n) {
 </div>
 <!--footer-->
 <div class="w3-container" style="background-color:black;width:100%;height:40%;display: flex;justify-content: center;">
-	<div class="footfont" style="margin:auto;color: white;"><h1 class="footfont">Everything you just saw has made completely with <i class="fa fa-heart" style="color:red;"></i> by me.&copy;2017<br>	<h3 class="footfont"style="margin-left:0px;margin-bottom:0px;color:white;float:left;">Friend's websites <i class="fa fa-smile-o"></i> : <a href="https://dannonair.github.io/" class="HYPOCRATES"  target="_blank" style="color:white;">HYPOCRATES</a></h3>
+	<div class="footfont" style="margin:auto;color: white;"><h1 class="footfont">Everything you just saw has made completely with <i class="fa fa-heart" style="color:red;"></i> by me.&copy;2017<br>	<h3 class="footfont"style="margin-left:0px;margin-bottom:0px;color:white;float:left;">Friend's websites <i class="fa fa-smile-o"></i> : <a href="http://thatrealdann.github.io/" class="HYPOCRATES"  target="_blank" style="color:white;">HYPOCRATES</a></h3>
 	
 
 </div>
