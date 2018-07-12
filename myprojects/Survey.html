@@ -1,0 +1,62 @@
+<head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/Survey.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class=" navdiv"><li><a class="btn homeicn" href="https://amirhakimnejad.github.io" title="Take me home!"><i class="fa fa-home"></i></a></li></nav>
+    <header>
+        <h1 align="center" id="title">Survey form</h1>
+    </header>
+
+    <main>
+        <section>
+            <div formdiv>
+                <form id="survey-form" align="center">
+                    <label id="name-label" for="name">First Name</label>
+                    <input id="name" type="text" required placeholder="Your Name"><br/>
+                    <label id="email-label" for="email">Email Address</label>
+                    <input id="email" type="email" required placeholder="example@example.com"><br/>
+                    <label id="number-label" for="phne">Phone Number</label>
+                    <input id="phne" type="number" size="10" maxlength="13" placeholder="+989121234567" required><br/>
+                    <select>
+                        <option disabled selected value> -- select one -- </option>
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                    </select>
+                    <fieldset>
+                        <legend>Pick one</legend>
+                        <label for="one">One</label>
+                        <input id="one" name="radio" type="radio">
+                        <label for="two">Two</label>
+                        <input id="two" name="radio" type="radio">
+                        <label for="three">Three</label>
+                        <input id="three" name="radio" type="radio">
+                        <label for="four">Four</label>
+                        <input id="four" name="radio" type="radio">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Pick Yours</legend>
+                        <label for="one">One</label>
+                        <input id="one" type="checkbox">
+                        <label for="two">Two</label>
+                        <input id="two" type="checkbox">
+                        <label for="three">Three</label>
+                        <input id="three" type="checkbox">
+                        <label for="four">Four</label>
+                        <input id="four" type="checkbox">
+                    </fieldset>
+                    <textarea name="comment" placeholder="Comment"></textarea><br/>
+                    <input class="btn" type="submit" id="submit" name="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+        <footer>
+        
+	</footer>
+</body>
