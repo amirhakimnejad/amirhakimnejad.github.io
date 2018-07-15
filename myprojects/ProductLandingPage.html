@@ -1,0 +1,50 @@
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="css/ProductLandingPage.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<script>
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction()
+		{
+			if (document.body.scrollTop > 260 || document.documentElement.scrollTop > 260)
+				document.getElementById("nav-bar").style.opacity = "0.5";
+			else
+				document.getElementById("nav-bar").style.opacity = "1";
+		}
+	</script>
+</head>
+<body>
+  <header id="header">
+		<img id="header-img" alt="Horizon Zero Dawn Cover" src="projpics/oie_31lDN4Net7iT1.jpg"/>
+		<nav id="nav-bar" class="navdiv">
+			<li><a class="nav-link" href="https://amirhakimnejad.github.io" title="Take me home!">Home</a></li>
+			<li><a class="nav-link" href="#viddiv">Description</a></li>
+			<li><a class="nav-link" href="#prdiv">Products</a></li>
+			<li><a class="nav-link" href="#subdiv">Subscribe</a></li>
+		</nav>
+  </header>
+
+  <main class="content">
+		<div id="viddiv">
+			<iframe id="video" width="100%" height="700px" src="https://www.youtube.com/embed/T5Xx3MdqdgM" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="prdiv">
+			<div id="img1" class="prbox product"></div>
+			<div id="img2" class="prbox product"></div>
+			<div id="img3" class="prbox product"></div>
+			<div id="img4" class="prbox product"></div>
+		</div>
+		<div id="subdiv">
+			<form id="form" action="" method="post">
+				<input id="email" class="inputsstyle" name="email" type="email" placeholder="you@example.com" required>
+				<input id="submit" class="btn" type="submit" value="Subscribe">
+			</form>
+		</div>
+  </main>
+
+  <footer>
+			<h3>Made with love by <a style="color: rgb(108,21,7);" href="https://github.com/amirhakimnejad" target="_blank">Amir Hakimnejad</a></h3>
+	</footer>
+</body>
