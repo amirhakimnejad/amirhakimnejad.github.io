@@ -4,7 +4,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 
 .td1disp{
-	background-image:url("http://s8.picofile.com/file/8303932184/photo_2017_08_18_21_33_39.jpg");
+	background-image:url("images/photo_2017-08-18_21-33-39.jpg");
     background-position: center;
 	overflow:hidden;
 	max-height:55%;
@@ -21,11 +21,11 @@ color:rgb(108,21,7);
 body::-webkit-scrollbar {
     width: 1em;
 }
- 
+
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: rgb(168,56,11);
   outline: 1px solid slategrey;
@@ -40,7 +40,7 @@ body, html {height: 100%}
 	background-attachment:fixed;
 }
 credit{
-	font-size:10px !important; 
+	font-size:10px !important;
 }
 .mySlides {display:none}
 .demo {cursor:pointer}
@@ -203,7 +203,7 @@ margin-left:18% !important;
 @media only screen and (max-width:800px)
 {
 	.tables,.tablesproj{
-		
+
 		height:100% !important;
 		width:100% !important;
 }
