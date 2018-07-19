@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Amir Hakimnejad</title>
+	<title>Amirhossein Hakimnejad</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"></link>
-	<link rel="stylesheet" href="style.css"></link>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-	<link href="images/coffee-icon.JPG" rel="shortcut icon" type="image/x-icon"></link>
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	// Change style of navbar on scroll
+		window.onscroll = function() {myFunction()};
+		function myFunction() {
+			var navbar = document.getElementById("myNavbar");
+			if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+	        	navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
+	    	} else {
+	        	navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-black", "");
+	    	}
+			}
+
+			// Used to toggle the menu on small screens when clicking on the menu button
+			function toggleFunction() {
+	    	var x = document.getElementById("navDemo");
+	    	if (x.className.indexOf("w3-show") == -1) {
+	        	x.className += " w3-show";
+	    	} else {
+	        	x.className = x.className.replace(" w3-show", "");
+	    	}
+			}
+			/*Scroll transition to anchor*/
+			$(document).ready(function(){
+	  	// Add smooth scrolling to all links
+	  	$("a").on('click', function(event) {
+
+	    	// Make sure this.hash has a value before overriding default behavior
+	    	if (this.hash !== "") {
+	      	// Prevent default anchor click behavior
+	      	event.preventDefault();
+
+	      	// Store hash
+	      	var hash = this.hash;
+
+	      	// Using jQuery's animate() method to add smooth page scroll
+	      	// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      	$('html, body').animate({
+	        	scrollTop: $(hash).offset().top
+	      	}, 800, function(){
+
+	        	// Add hash (#) to URL when done scrolling (default click behavior)
+	        	window.location.hash = hash;
+	      	});
+	    	} // End if
+	  	});
+		});
+	</script>
 </head>
 <body>
-<script>
+<header>
+	<!--Nav-->
+	<div class="w3-top">
+	  <div class="w3-bar" id="myNavbar">
+	    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fa fa-bars"></i>
+	    </a>
+		<i class="fa fa-coffee w3-bar-item w3-right" style="color:rgb(108,21,7);margin-top:4px;"></i>
+	    <a href="#home" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-home"></i></a>
+	    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-user"></i> </a>
+	    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-th"></i> </a>
+	    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-envelope"></i> </a>
+	  </div>
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-black", "");
-    }
-}
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+	    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+	    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+	  </div>
+	</div>
+</header>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-/*Scroll transition to anchor*/
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
 <div class="bgimg w3-display-container w3-animate-opacity"id="home">
 
   <p class="w3-display-topmiddle blackwhitehover " style="background-color:rgba(168,56,11,0.7); padding:10px;z-index:1;">Isn't So Lovely Today?<span onclick="this.parentElement.style.display='none'" style="color:black;font-size:normal; text-align:right;">X</span></p>
   <div class="w3-display-middle">
-		<h1 class=" font" style="color:white;text-align:center">WELCOME TO MY WORLD</h1>
+		<h1 class=" font" style="color:white;text-align:center">Amirhossein Hakimnejad</h1>
 	<hr style="margin:auto;width:50%;border-color:grey;">
-    <h2 class="font" style="color:white;text-align:center">Make sure you scroll all the way down.</h1>
+    <h2 class="font" style="color:white;text-align:center">AI and Web development enthusiast</h2>
   </div>
 </div>
 <div class="w3-text-white w3-display-bottomleft w3-padding-large credit ">
@@ -75,20 +96,20 @@ $(document).ready(function(){
 <!--About me-->
 <div class="w3-container bgimg" style="width:100%;height:50%;display: flex;" id="about">
   <div class="w3-content tables" style="align:center;overflow-y:hidden !important;background-color:rgba(141,46,10,0.8);width:70%;height:60%;">
-	<table class="w3-table" style="height:100%;">
-		<tr class="table1resp table1">
-			<td class="td1disp"style="text-align:center;vertical-align:middle;width:30%;height:100%;">
-			</td>
-			<td style="text-align:center;vertical-align:middle;">
-				<br>I'm Amir Hakimnejad(Amirhossein Hakimnejad)
-				<br>AI and Web development enthusiast<i class="fa fa-smile-o"></i>
-				<br>This website will be my portfolio and a place for those who want to know me better
-				<br><a href="#contact">Contact me</a> for more.
-				<br><blockquote style="padding-left:2%;border-left:4px solid black;">I think the foremost quality – there’s no success without it – is really loving what you do. If you love it, you do it well, and there’s no success if you don’t do well what you’re working at.<br><cite>Malcolm Forbes</cite></blockquote>
-				</h2></td>
-		</tr>
-  </table>
-</div>
+		<table class="w3-table" style="height:100%;">
+			<tr class="table1resp table1">
+				<td class="td1disp"style="text-align:center;vertical-align:middle;width:30%;height:100%;">
+				</td>
+				<td style="text-align:center;vertical-align:middle;">
+					<br>I'm Amir Hakimnejad(Amirhossein Hakimnejad)
+					<br>AI and Web development enthusiast<i class="fa fa-smile-o"></i>
+					<br>This website will be my portfolio and a place for those who want to know me better
+					<br><a href="#contact">Contact me</a> for more.
+					<br><blockquote style="padding-left:2%;border-left:4px solid black;">I think the foremost quality – there’s no success without it – is really loving what you do. If you love it, you do it well, and there’s no success if you don’t do well what you’re working at.<br><cite>Malcolm Forbes</cite></blockquote>
+					</td>
+				</tr>
+  	</table>
+	</div>
 </div>
 <!--Projects-->
 <div class="w3-container bgimg pj" style="width:100%;height:100%;display: flex;justify-content: center;" id="portfolio">
@@ -97,7 +118,7 @@ $(document).ready(function(){
 			<th style="margin-top:0px;"><h3>Here are Some of my Projects</h3></th>
 		</tr>
 		<tr>
-		<td>
+			<td>
 			<script>
 				var countDownDate = new Date("Nov 25, 2017 00:00:00").getTime();
 				var x = setInterval(function() {
@@ -118,9 +139,6 @@ $(document).ready(function(){
 			</script>
 			<h2 class="font" style="text-align:center;">This section will be updated in <i id="countdown" style="color:white!important;"></i></h4>
 				<h3  style="text-align:center;">You can temporarily see them <a href="https://github.com/amirhakimnejad/amirhakimnejad.github.io/tree/master/myprojects" target="_blank">here</a>.</h3>
-
-
-
 		</td>
 		</tr>
 		<tr>
@@ -132,50 +150,24 @@ $(document).ready(function(){
 <!--Contact me-->
 <div style="background-color:black; width:100%;height:100%;display: flex;justify-content: center;" id="contact">
 	<div class="pj" style="width:100%;height:100%;display: flex;justify-content: center;" id="portfolio">
-	<table class=""style="margin:auto 0px;background-color:black;width:100%;height:100%;">
-		<th>
-			<h1>I'd Love to Hear Your Feedback!<i class="fa icon-comments"></i></h1><br>
-    <a href="https://github.com/amirhakimnejad" target="_blank"><i class="git cnicons fa fa-github"></i></a>
-    <a href="https://twitter.com/amirhakimnejad" target="_blank"><i class="bluesites cnicons fa fa-twitter"></i></a>
-    <a href="https://linkedin.com/in/amirhakimnejad/" target="_blank"><i class="bluesites cnicons fa fa-linkedin"></i></a>
-	<a href="https://instagram.com/amir_hakimnejad/" target="_blank"><i class="cnicons fa fa-instagram"></i></a>
-	<a href="https://t.me/the_taxman" target="_blank"><i class="bluesites cnicons fa fa-telegram"></i></a>
-		</th>
-	</table>
-</div>
+		<table class=""style="margin:auto 0px;background-color:black;width:100%;height:100%;">
+			<th>
+				<h2>I'd Love to Hear Your Feedback!<i class="fa icon-comments"></i></h2><br>
+    		<a href="https://github.com/amirhakimnejad" target="_blank"><i class="git cnicons fa fa-github"></i></a>
+    		<a href="https://twitter.com/amirhakimnejad" target="_blank"><i class="bluesites cnicons fa fa-twitter"></i></a>
+    		<a href="https://linkedin.com/in/amirhakimnejad/" target="_blank"><i class="bluesites cnicons fa fa-linkedin"></i></a>
+				<a href="https://instagram.com/amir_hakimnejad/" target="_blank"><i class="cnicons fa fa-instagram"></i></a>
+				<a href="https://t.me/the_taxman" target="_blank"><i class="bluesites cnicons fa fa-telegram"></i></a>
+			</th>
+		</table>
+	</div>
 </div>
 <!--footer-->
-<div class="w3-container" style="background-color:black;width:100%;height:40%;display: flex;justify-content: center;">
-	<div class="footfont" style="margin:auto;color: white;"><h2 class="footfont">Everything you just saw has made completely with <i class="fa fa-heart" style="color:red;"></i> by me.&copy;2017</h2></div>
+<footer>
+	<div class="w3-container" style="background-color:black;width:100%;height:40%;display: flex;justify-content: center;">
+		<div class="footfont" style="margin:auto;color: white;"><h2 class="footfont">Made completely with <i class="fa fa-heart" style="color:red;"></i> by me.&copy;2017</h2></div>
+	</div>
+</footer>
 
-
-</div>
-
-</div>
-<div style="width:100%;background-color:black; text-align:center;">
-<a rel="license" style="display:inline; text-align:center;" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"  target="framename"><img alt="Creative Commons License" title="This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License."src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
-<a target="_blank" href="https://www.copyrighted.com/copyrights/view/pujx-h5pw-sm6t-j9g6"><img border="0" alt="Copyrighted.com Registered &amp; Protected PUJX-H5PW-SM6T-J9G6" title="Copyrighted.com Registered &amp; Protected PUJX-H5PW-SM6T-J9G6" width="118" src="https://static.copyrighted.com/images/seal.gif" /></a>
-</div>
 </body>
-<!--Nav-->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-	<i class="fa fa-coffee w3-bar-item w3-right" style="color:rgb(108,21,7);margin-top:4px;"></i>
-    <a href="#home" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-home"></i></a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-user"></i> </a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-th"></i> </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-envelope"></i> </a>
-  </div>
-
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	<a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-
-  </div>
-</div>
 </html>
