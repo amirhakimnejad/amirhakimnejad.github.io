@@ -1,5 +1,74 @@
-.font,body,h1,p,h3,h2 {
-	font-family: 'Open Sans Condensed', sans-serif;
+:not(.fontaw){
+	font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
+.navdiv{
+  overflow: hidden;
+	position: fixed;
+	width: 100%;
+	transition: top 0.3s;
+	background-color: black;
+	top: 0;
+  left: 0;
+  list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 25%;
+	opacity: 1;
+	transition: opacity 1s;
+	z-index: 1;
+  text-decoration: none;
+}
+
+.navdiv:hover {
+	opacity: 1!important;
+}
+
+.navdiv a {
+  padding: 10px 12px;
+  text-decoration: bold;
+  font-size: 1em;
+}
+
+.navDemo {
+	width: 100% !important;
+}
+
+
+#about {
+	width:100%;height:50%;display: flex;
+}
+
+#portfolio {
+	width:100%;height:100%;display: flex;justify-content: center;
+}
+
+.tablesproj {
+	margin:auto 0px;
+	background-color:black;
+	width:85%;
+	height:40%;
+}
+
+#contact {
+	background-color:black;
+	 width:100%;
+	 height:100%;
+	 display: flex;
+	 justify-content: center;
+}
+.contacttable {
+	margin:auto 0px;
+	background-color:black;
+	width:100%;
+	height:100%;
+}
+#footer {
+	background-color:black;
+	width:100%;
+	height:40%;
+	display: flex;
+	justify-content: center;
 }
 
 
