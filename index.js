@@ -7,6 +7,7 @@ function scrollFunction()
   else
     document.getElementById("nav-bar").style.opacity = "1";
 }
+
   /*Scroll transition to anchor*/
 $(document).ready(function(){
 // Add smooth scrolling to all links
@@ -36,5 +37,30 @@ function toggleFunction() {
       x.className += " w3-show";
   } else {
       x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+//Project fetcher
+function callGitHub() {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      let obj = JSON.parse(this.responseText);
+      projectPublisher(obj);
+    }
+  };
+  xhttp.open("GET", "https://api.github.com/users/amirhakimnejad/repos", true);
+  xhttp.send();
+}
+
+function projectPublisher(obje) {
+  for(let i = 0; i < Object.keys(obje).length; i++)
+  {
+    console.log("Name: "+obje[i].name);
+    console.log("Url: "+obje[i].html_url);
+    console.log("Description: "+obje[i].description);
+    console.log("Main Language: "+obje[i].language);
+    console.log("==============================")
   }
 }
