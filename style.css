@@ -85,6 +85,11 @@
 	color:rgb(108,21,7);
 }
 
+hr {
+	margin:auto;
+	width:50%;
+	border-color:grey;
+}
 
 body::-webkit-scrollbar {
   width: 1em;
