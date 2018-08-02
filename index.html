@@ -7,89 +7,40 @@
 	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-	// Change style of navbar on scroll
-		window.onscroll = function() {myFunction()};
-		function myFunction() {
-			var navbar = document.getElementById("myNavbar");
-			if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-	        	navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-black";
-	    	} else {
-	        	navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-black", "");
-	    	}
-			}
-
-			// Used to toggle the menu on small screens when clicking on the menu button
-			function toggleFunction() {
-	    	var x = document.getElementById("navDemo");
-	    	if (x.className.indexOf("w3-show") == -1) {
-	        	x.className += " w3-show";
-	    	} else {
-	        	x.className = x.className.replace(" w3-show", "");
-	    	}
-			}
-			/*Scroll transition to anchor*/
-			$(document).ready(function(){
-	  	// Add smooth scrolling to all links
-	  	$("a").on('click', function(event) {
-
-	    	// Make sure this.hash has a value before overriding default behavior
-	    	if (this.hash !== "") {
-	      	// Prevent default anchor click behavior
-	      	event.preventDefault();
-
-	      	// Store hash
-	      	var hash = this.hash;
-
-	      	// Using jQuery's animate() method to add smooth page scroll
-	      	// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-	      	$('html, body').animate({
-	        	scrollTop: $(hash).offset().top
-	      	}, 800, function(){
-
-	        	// Add hash (#) to URL when done scrolling (default click behavior)
-	        	window.location.hash = hash;
-	      	});
-	    	} // End if
-	  	});
-		});
-	</script>
+	<script src="index.js"></script>
 </head>
+
 <body>
-<header class="bgimg w3-display-container w3-animate-opacity"id="home">
+<header class="bgimg" id="home">
 	<!--Nav-->
-	<nav>
-		<div class="w3-top">
+	<nav id="nav-bar" class="navdiv">
 	  	<div class="w3-bar" id="myNavbar">
-	    	<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-	      <i class="fa fa-bars"></i>
+				<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fontaw fas fa-bars"></i>
 	    	</a>
-				<i class="fa fa-coffee w3-bar-item w3-right" style="color:rgb(108,21,7);margin-top:4px;"></i>
-	    	<a href="#home" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-home"></i></a>
-	    	<a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-user"></i> </a>
-	    	<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-th"></i> </a>
-	    	<a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fa fa-envelope"></i> </a>
+				<a href="#home" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-home"></i></a>
+	    	<a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-user"></i> </a>
+	    	<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw far fa-file-pdf"></i></a>
+	    	<a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-envelope"></i> </a>
 	  	</div>
 
-	  	<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
 				<a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
 	    	<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
 	    	<a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
 	    	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
 	  	</div>
-		</div>
 	</nav>
   <div class="w3-display-middle">
-		<h1 class=" font" style="color:white;text-align:center">Amirhossein Hakimnejad</h1>
+		<h1 style="color:white;text-align:center">Amirhossein Hakimnejad</h1>
 		<hr style="margin:auto;width:50%;border-color:grey;">
-    <h2 class="font" style="color:white;text-align:center">AI and Web development enthusiast</h2>
+    <h2 style="color:white;text-align:center">AI and Web development enthusiast</h2>
   </div>
 </header>
-<p class="w3-display-topmiddle blackwhitehover " style="background-color:rgba(168,56,11,0.7); padding:10px;z-index:1;">Isn't So Lovely Today?<span onclick="this.parentElement.style.display='none'" style="color:black;font-size:normal; text-align:right;">X</span></p>
 <!--About me-->
-<div class="w3-container bgimg" style="width:100%;height:50%;display: flex;" id="about">
+<div class="w3-container bgimg" id="about">
   <div class="w3-content tables" style="align:center;overflow-y:hidden !important;background-color:rgba(141,46,10,0.8);width:70%;height:60%;">
 		<table class="w3-table" style="height:100%;">
 			<tr class="table1resp table1">
@@ -107,60 +58,36 @@
 	</div>
 </div>
 <!--Projects-->
-<div class="w3-container bgimg pj" style="width:100%;height:100%;display: flex;justify-content: center;" id="portfolio">
-	<table class="tablesproj"style="margin:auto 0px;background-color:black;width:85%;height:40%;">
-		<tr style="line-height:1em;border:1px solid white;">
-			<th style="margin-top:0px;"><h3>Here are Some of my Projects</h3></th>
-		</tr>
-		<tr>
-			<td>
-			<script>
-				var countDownDate = new Date("Nov 25, 2017 00:00:00").getTime();
-				var x = setInterval(function() {
-				var now = new Date().getTime();
-				var distance = countDownDate - now;
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-				document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-				+ minutes + "m " + seconds + "s ";
+<div class=" w3-container bgimg pj" id="portfolio">
 
-				if (distance < 0) {
-					clearInterval(x);
-					document.getElementById("countdown").innerHTML = "no time!!";
-				}
-				}, 1000);
-			</script>
-			<h2 class="font" style="text-align:center;">This section will be updated in <i id="countdown" style="color:white!important;"></i></h4>
-				<h3  style="text-align:center;">You can temporarily see them <a href="https://github.com/amirhakimnejad/amirhakimnejad.github.io/tree/master/myprojects" target="_blank">here</a>.</h3>
-		</td>
-		</tr>
+	<table class="tablesproj">
 		<tr>
-			<td><br>
+			<td style="text-align:center;">
+			<h3>I'm doing my best to keep my github up to date, so as long as I do that this section will be updated automatically.</h3>
+			<h3>You can temporarily see them <a href="https://github.com/amirhakimnejad/amirhakimnejad.github.io/tree/master/myprojects" target="_blank">here</a>.</h3>
 			</td>
 		</tr>
 	</table>
 </div>
 <!--Contact me-->
-<div style="background-color:black; width:100%;height:100%;display: flex;justify-content: center;" id="contact">
-	<div class="pj" style="width:100%;height:100%;display: flex;justify-content: center;" id="portfolio">
-		<table class=""style="margin:auto 0px;background-color:black;width:100%;height:100%;">
+<div id="contact">
+	<div class="pj" id="portfolio">
+		<table class="contacttable">
 			<th>
 				<h2>I'd Love to Hear Your Feedback!<i class="fa icon-comments"></i></h2><br>
-    		<a href="https://github.com/amirhakimnejad" target="_blank"><i class="git cnicons fa fa-github"></i></a>
-    		<a href="https://twitter.com/amirhakimnejad" target="_blank"><i class="bluesites cnicons fa fa-twitter"></i></a>
-    		<a href="https://linkedin.com/in/amirhakimnejad/" target="_blank"><i class="bluesites cnicons fa fa-linkedin"></i></a>
-				<a href="https://instagram.com/amir_hakimnejad/" target="_blank"><i class="cnicons fa fa-instagram"></i></a>
-				<a href="https://t.me/the_taxman" target="_blank"><i class="bluesites cnicons fa fa-telegram"></i></a>
+    		<a href="https://github.com/amirhakimnejad" target="_blank"><i class="git cnicons fontaw fab fa-github"></i></a>
+    		<a href="https://twitter.com/amirhakimnejad" target="_blank"><i class="bluesites cnicons fontaw fab fa-twitter"></i></a>
+    		<a href="https://linkedin.com/in/amirhakimnejad/" target="_blank"><i class="bluesites cnicons fontaw fab fa-linkedin"></i></a>
+				<a href="https://instagram.com/amir_hakimnejad/" target="_blank"><i class="cnicons fontaw fab fa-instagram"></i></a>
+				<a href="https://t.me/the_taxman" target="_blank"><i class="bluesites cnicons fontaw fab fa-telegram"></i></a>
 			</th>
 		</table>
 	</div>
 </div>
 <!--footer-->
 <footer>
-	<div class="w3-container" style="background-color:black;width:100%;height:40%;display: flex;justify-content: center;">
-		<div class="footfont" style="margin:auto;color: white;"><h2 class="footfont">Made completely with <i class="fa fa-heart" style="color:red;"></i> by me.</h2></div>
+	<div class="w3-container" id="footer">
+		<div class="footfont" style="margin:auto;color: white;"><h2 class="footfont">Made completely with <i class="fontaw fa fa-heart" style="color:red;"></i> by me.</h2></div>
 	</div>
 </footer>
 
