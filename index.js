@@ -43,6 +43,7 @@ function toggleFunction() {
 //Project fetcher
 function callGitHub() {
   let xhttp = new XMLHttpRequest();
+  document.getElementById('fetcher').innerHTML = 'Fetching'
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
@@ -55,12 +56,10 @@ function callGitHub() {
 }
 
 function projectPublisher(obje) {
+  document.getElementById('prdiv').innerHTML = ''
+  document.getElementById('fetcher').innerHTML = 'Fetch again?'
   for(let i = 0; i < Object.keys(obje).length; i++)
   {
-    console.log("Name: "+obje[i].name);
-    console.log("Url: "+obje[i].html_url);
-    console.log("Description: "+obje[i].description);
-    console.log("Main Language: "+obje[i].language);
-    console.log("==============================")
+    document.getElementById('prdiv').innerHTML += '<div class="project"><strong>Title: <a href="' + obje[i].html_url + '" target="_blank">' + obje[i].name + '</a><br>Main Lang: ' + obje[i].language + '</strong><br>' + obje[i].description + '</div>';
   }
 }
