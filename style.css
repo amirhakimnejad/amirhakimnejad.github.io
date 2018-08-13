@@ -7,7 +7,7 @@
 	position: fixed;
 	width: 100%;
 	transition: top 0.3s;
-	background-color: black;
+	background-color: #D4D4D4;
 	top: 0;
   left: 0;
   list-style: none;
@@ -42,16 +42,20 @@
 }
 
 #portfolio {
+	padding-top: 20px;
 	width:80%;
 	min-height: 300px;
-	background-color:black;
+	background-color:#D4D4D4;
 	margin: auto;
 	text-align: center;
 }
 
+#portfoliodiv {
+	padding-top: 40px;
+}
 
 #contact {
-	background-color:black;
+	background-color:#D4D4D4;
 	 width:100%;
 	 height:100%;
 	 display: flex;
@@ -59,7 +63,7 @@
 }
 .contacttable {
 	margin:auto 0px;
-	background-color:black;
+	background-color:#D4D4D4;
 	width:100%;
 	height:100%;
 }
@@ -75,7 +79,7 @@
 }
 
 .project {
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 1%;
   width: 200px;
   height: 200px;
@@ -84,14 +88,14 @@
 	vertical-align: middle;
 }
 .project:hover {
-	background-color: gray !important;
-	color: black !important;
+	background-color: black !important;
+	color: #D4D4D4 !important;
   transition: color 0.5s;
 	transition: background-color 0.5s;
 }
 
 #footer {
-	background-color:black;
+	background-color:#D4D4D4;
 	width:100%;
 	height:40%;
 	display: flex;
@@ -109,7 +113,7 @@
 }
 
 .pj{
-	color:rgb(108,21,7);
+	color:#591004;
 }
 
 hr {
@@ -151,44 +155,44 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 a:link{
-	color:rgb(108,21,7);
+	color:#591004;
 	text-decoration:none;
 }
 a:hover{
-	color:white;
+	color:#D4D4D4;
 	text-decoration:none;
 }
 a:visited{
-	color:rgb(108,21,7);
+	color:#591004;
 	text-decoration:none;
 }
 a:active{
-	color:black;
+	color:#D4D4D4;
 	text-decoration:none;
 }
 .cnicons:hover
 {
 	font-size:20px !important;
 }
-.blackwhitehover:hover
+.#D4D4D4#D4D4D4hover:hover
 {
-	background-color:white!important;
-	color:black!important;
+	background-color:#D4D4D4!important;
+	color:#D4D4D4!important;
 }
 .HYPOCRATES:hover {
-  color: black !important;
-  background-color: white !important;
+  color: #D4D4D4 !important;
+  background-color: #D4D4D4 !important;
 }
 .btnhover:hover {
-	color:black !important;
-	background-color:rgb(108,21,7) !important;
+	color:#D4D4D4 !important;
+	background-color:#591004 !important;
 }
 .bluesites:hover{
 	color:skyblue;
 }
 .github:hover{
-	color:white;
-	background-color:black !important;
+	color:#D4D4D4;
+	background-color:#D4D4D4 !important;
 }
 .navitem:hover{
 	display:none !important;
@@ -199,7 +203,7 @@ a:active{
 @media only screen and (max-width:768px)
 {
 	p,span,.tables{
-  	font-size: 20px;
+  	font-size: 16px;
 	}
 }
 
@@ -234,7 +238,7 @@ a:active{
 @media only screen and (max-width:339px)
 {
 	p,span {
-  	font-size: 16px !important;
+  	font-size: 12px !important;
 	}
 }
 
@@ -269,7 +273,7 @@ a:active{
 @media only screen and (max-width:362px)
 {
 	.footfont {
-  	font-size: 16px !important;
+  	font-size: 12px !important;
 	}
 }
 
@@ -323,7 +327,7 @@ a:active{
 	.table1resp{
   	background-image: url('images/photo_2017_08_18_21_33_39.jpg');
   	min-height: 100%;
-  	color:white;
+  	color:#D4D4D4;
   	background-size: cover;
 	}
 	.td1disp{
@@ -336,11 +340,18 @@ a:active{
 	.table1resp{
     background-image: url('images/photo_2017_08_18_21_33_39.jpg');
     min-height: 100%;
-    color:white;
+    color:#D4D4D4;
     background-size: cover;
 	}
 	.td1disp{
 		display:none !important;
+	}
+}
+
+@media only screen and (max-width:503px)
+{
+	#prdiv {
+		justify-content: center !important;
 	}
 }
 

@@ -20,20 +20,10 @@
 	<!--Nav-->
 	<nav id="nav-bar" class="navdiv">
 	  	<div class="w3-bar" id="myNavbar">
-				<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-	      <i class="fontaw fas fa-bars"></i>
-	    	</a>
-				<a href="#home" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-home"></i></a>
-	    	<a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-user"></i> </a>
-	    	<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw far fa-file-pdf"></i></a>
-	    	<a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right btnhover"><i class="fontaw fa fa-envelope"></i> </a>
-	  	</div>
-
-			<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-				<a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-	    	<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-	    	<a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-	    	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+				<a href="#home" class="w3-bar-item w3-button w3-right btnhover"><i class="fontaw fa fa-home"></i></a>
+	    	<a href="#about" class="w3-bar-item w3-button w3-right btnhover"><i class="fontaw fa fa-user"></i> </a>
+	    	<a href="#portfoliodiv" class="w3-bar-item w3-button w3-right btnhover"><i class="fontaw far fa-file-pdf"></i></a>
+	    	<a href="#contact" class="w3-bar-item w3-button w3-right btnhover"><i class="fontaw fa fa-envelope"></i> </a>
 	  	</div>
 	</nav>
   <div class="w3-display-middle" style="color:white;text-align:center">
@@ -44,7 +34,7 @@
 </header>
 <!--About me-->
 <div class="w3-container bgimg" id="about">
-  <div class="w3-content tables" style="align:center;overflow-y:hidden !important;background-color:rgba(141,46,10,0.8);width:70%;height:60%;">
+  <div class="w3-content tables" style="align:center;overflow-y:hidden !important;background-color:rgba(212, 212, 212, 0.8);width:70%;height:60%;">
 		<table class="w3-table" style="height:100%;">
 			<tr class="table1resp table1">
 				<td class="td1disp"style="text-align:center;vertical-align:middle;width:30%;height:100%;">
@@ -65,13 +55,12 @@
 </div>
 
 <!--Projects-->
-<div class="w3-container bgimg pj">
+<div id="portfoliodiv" class="w3-container bgimg pj">
 <div id="portfolio">
 			<h3>I'm doing my best to keep my github up to date, so as long as I do that this section will be updated automatically.<br></h3>
-			<a id="fetcher" onclick="callGitHub()">Fetch Projects</a>
+			<a href="#portfolio" id="fetcher" onclick="callGitHub()">Fetch Projects</a>
 			<div id="prdiv">
 				<br><br>
-
 			</div>
 			<h2>And here is my <a href="#">CV</a></h2>
 </div>
@@ -94,7 +83,7 @@
 <!--footer-->
 <footer>
 	<div class="w3-container" id="footer">
-		<div class="footfont" style="margin:auto;color: white;"><h2 class="footfont">Made completely with <i class="fontaw fa fa-heart" style="color:red;"></i> by me.</h2></div>
+		<div class="footfont" style="margin:auto;"><h2 class="footfont">Made completely with <i class="fontaw fa fa-heart" style="color:red;"></i> by me.</h2></div>
 	</div>
 </footer>
 
