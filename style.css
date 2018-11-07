@@ -72,7 +72,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-	/* justify-content: center; */
 	align-items: center;
 	width:85%;
 	margin: auto;
@@ -104,12 +103,12 @@
 
 
 .td1disp{
-	background-image:url("images/photo_2017-08-18_21-33-39.jpg");
+	background-image:url("images/photo_2018-11-07_13-15-24.jpg");
   background-position: center;
+	background-size: cover;
 	overflow:hidden;
 	max-height:55%;
-	max-width:80%;
-
+	max-width:100%;
 }
 
 .pj{
@@ -174,25 +173,18 @@ a:active{
 {
 	font-size:20px !important;
 }
-.#D4D4D4#D4D4D4hover:hover
-{
-	background-color:#D4D4D4!important;
-	color:#D4D4D4!important;
-}
-.HYPOCRATES:hover {
-  color: #D4D4D4 !important;
-  background-color: #D4D4D4 !important;
-}
+
 .btnhover:hover {
 	color:#D4D4D4 !important;
 	background-color:#591004 !important;
 }
+
 .bluesites:hover{
 	color:skyblue;
 }
+
 .github:hover{
-	color:#D4D4D4;
-	background-color:#D4D4D4 !important;
+	color:black;
 }
 .navitem:hover{
 	display:none !important;
@@ -317,7 +309,11 @@ a:active{
 
 @media only screen and (max-width:800px)
 {
-	.tables,#portfolio{
+	#portfolio{
+		height:100% !important;
+		width:100% !important;
+	}
+	.tables{
 		height:100% !important;
 		width:100% !important;
 	}
@@ -325,9 +321,7 @@ a:active{
 		max-width:80% !important;
 	}
 	.table1resp{
-  	background-image: url('images/photo_2017_08_18_21_33_39.jpg');
   	min-height: 100%;
-  	color:#D4D4D4;
   	background-size: cover;
 	}
 	.td1disp{
@@ -338,9 +332,7 @@ a:active{
 @media only screen and (max-height:600px)
 {
 	.table1resp{
-    background-image: url('images/photo_2017_08_18_21_33_39.jpg');
     min-height: 100%;
-    color:#D4D4D4;
     background-size: cover;
 	}
 	.td1disp{
